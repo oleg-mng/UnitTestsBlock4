@@ -1,8 +1,10 @@
 package com.example;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,6 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+@ExtendWith(MockitoExtension.class)
 class BookServiceTest {
     // Создаем заглушку типа Mock для интерфейса BookRepository
     @Mock
@@ -49,7 +52,7 @@ class BookServiceTest {
     }
 
     /**
-     * Проверяем поведение метода findAllBooks класса BookService
+     * Проверяем метод findAllBooks класса BookService
      */
     @Test
     public void findAllBooksShouldReturnListBooks() {
