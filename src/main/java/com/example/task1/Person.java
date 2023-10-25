@@ -13,19 +13,19 @@ class Person {
     Person(String name, int age) {
         if (name == null || name.isBlank()) {
             this.name = DEFAULT_NAME;
-            this.age = MIN_AGE + 1;
+            this.age = age;
 
         } else if (age > MIN_AGE && age < MAX_AGE) {
             this.age = age;
-            this.name = "Jane Doe";
+            this.name = name;
 
         } else if (age <= MIN_AGE) {
             this.age = MIN_AGE;
-            this.name = "Jane Doe";
+            this.name = name;
 
         } else {
             this.age = MAX_AGE;
-            this.name = "Jane Doe";
+            this.name = name;
 
         }
 
